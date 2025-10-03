@@ -1,4 +1,4 @@
-﻿namespace Euclides
+﻿namespace EuclidesModern
 {
     partial class Form1
     {

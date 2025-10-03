@@ -1,4 +1,4 @@
-namespace Euclides
+namespace EuclidesModern
 {
     public partial class Form1 : Form
     {
@@ -20,16 +20,11 @@ namespace Euclides
         {
             uint nwd;
 
-            while (a != b)
+            while (b != 0)
             {
-                if (a > b)
-                {
-                    a = (a - b);
-                }
-                else
-                {
-                    b = (b - a);
-                }
+                uint temp = a % b;
+                a = b;
+                b = temp;
             }
 
             nwd = a;
