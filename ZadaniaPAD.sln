@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuclidesModern", "EuclidesM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorial", "Power\Factorial.csproj", "{CF56FDC4-DE8D-4FA9-BB4B-5161284B1661}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibbonaci", "Fibbonaci\Fibbonaci.csproj", "{5A0212CC-19E9-4EEE-8674-F04F9BF39AAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CF56FDC4-DE8D-4FA9-BB4B-5161284B1661}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF56FDC4-DE8D-4FA9-BB4B-5161284B1661}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF56FDC4-DE8D-4FA9-BB4B-5161284B1661}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0212CC-19E9-4EEE-8674-F04F9BF39AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0212CC-19E9-4EEE-8674-F04F9BF39AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0212CC-19E9-4EEE-8674-F04F9BF39AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0212CC-19E9-4EEE-8674-F04F9BF39AAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
