@@ -1,0 +1,38 @@
+[
+    {
+        "Name": "Phishing",
+        "Description": "Atak socjotechniczny polegający na podszyciu się pod zaufaną instytucję (e‑mail, SMS, strona) w celu wyłudzenia danych uwierzytelniających, informacji osobistych lub nakłonienia do pobrania złośliwego pliku."
+    },
+    {
+        "Name": "Spear Phishing (wycelowany phishing)",
+        "Description": "Zaawansowana forma phishingu, gdzie atak jest dostosowany do konkretnej osoby lub organizacji — wiadomości zawierają personalizowane informacje, co zwiększa szanse powodzenia ataku."
+    },
+    {
+        "Name": "Malware (wirusy, trojany, ransomware)",
+        "Description": "Złośliwe oprogramowanie instalowane na urządzeniu ofiary — może kraść dane, szyfrować pliki (ransomware), tworzyć backdoory lub umożliwiać zdalne sterowanie urządzeniem."
+    },
+    {
+        "Name": "DDoS (Distributed Denial of Service)",
+        "Description": "Atak polegający na zablokowaniu dostępu do usługi przez zalanie serwera lub łącza ogromną liczbą żądań pochodzących z wielu źródeł. Skutkuje przeciążeniem i brakiem dostępności serwisu."
+    },
+    {
+        "Name": "Man-in-the-Middle (MitM)",
+        "Description": "Przechwycenie i ewentualna modyfikacja komunikacji pomiędzy dwoma stronami (np. użytkownik — serwer), co pozwala atakującemu podsłuchiwać i kradnąć przesyłane dane."
+    },
+    {
+        "Name": "Credential Stuffing",
+        "Description": "Automatyczny atak, w którym atakujący używa wykradzionych zestawów loginów/hasła (z innych serwisów) do próby logowania się na konta użytkowników — działa dobrze gdy ludzie używają tych samych haseł w wielu miejscach."
+    },
+    {
+        "Name": "Brute Force (łamanie metodą siłową)",
+        "Description": "Metoda polegająca na systematycznym sprawdzaniu dużej liczby kombinacji haseł lub kluczy w celu złamania uwierzytelnienia. Często wspierana przez automaty i boty."
+    },
+    {
+        "Name": "Social Engineering (inżynieria społeczna)",
+        "Description": "Techniki manipulacji ludźmi w celu uzyskania informacji, dostępu lub zgody na wykonanie działań (np. podszywanie się telefonicznie pod pracownika wsparcia technicznego)."
+    },
+    {
+        "Name": "SQL Injection (wstrzyknięcie SQL)",
+        "Description": "Atak polegający na wprowadzeniu złośliwych zapytań SQL przez pola wejściowe aplikacji, co może prowadzić do odczytu, modyfikacji lub usunięcia danych z bazy."
+    }
+]
