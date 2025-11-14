@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibbonaci", "Fibbonaci\Fibb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAttacksCatalog", "WebAttacksCatalog\WebAttacksCatalog.csproj", "{D155603A-AB95-40B6-8EA1-226A8CA47C27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddUser", "AddUser\AddUser.csproj", "{63823467-74C9-457F-AC91-846AB19E1842}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,11 @@ Global
 		{D155603A-AB95-40B6-8EA1-226A8CA47C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D155603A-AB95-40B6-8EA1-226A8CA47C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D155603A-AB95-40B6-8EA1-226A8CA47C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63823467-74C9-457F-AC91-846AB19E1842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63823467-74C9-457F-AC91-846AB19E1842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63823467-74C9-457F-AC91-846AB19E1842}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{63823467-74C9-457F-AC91-846AB19E1842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63823467-74C9-457F-AC91-846AB19E1842}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AddUser.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <FlexLayout StyleClass="Block"
+                        Grid.Column="1">
+                <Label Text="Dane pracownika" StyleClass="Header"/>
+                <Border Stroke="{DynamicResource PrimaryDark}"
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 8">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Imię"/>
+                        <Entry x:Name="Name" Grid.Column="1"/>
+
+                        <Label Text="Nazwisko" Grid.Row="1"/>
+                        <Entry x:Name="Surname"
+                               Grid.Row="1"
+                               Grid.Column="1"/>
+
+                        <Label Text="Stanowisko" Grid.Row="2"/>
+                        <Picker x:Name="PositionPicker"
+                                Grid.Row="2"
+                                Grid.Column="1"/>
+                    </Grid>
+                </Border>
+            </FlexLayout>
+
+            <FlexLayout StyleClass="Block"
+                        Grid.Column="2">
+                <Label Text="Generowanie hasła" StyleClass="Header"/>
+                <Border Stroke="{DynamicResource PrimaryDark}"
+                        StrokeThickness="2"
+                        StrokeShape="RoundRectangle 8">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Ile znaków?"/>
+                        <Entry x:Name="PassLength"
+                               Grid.Column="1"/>
+
+                        <CheckBox x:Name="UseUpperCase"
+                                  Grid.Row="1"/>
+                        <Label Text="Małe i wielkie Litery"
+                               Grid.Row="1"
+                               Grid.Column="1"/>
+
+                        <CheckBox x:Name="UseNumerics"
+                                  Grid.Row="2"/>
+                        <Label Text="Cyfry"
+                               Grid.Row="2"
+                               Grid.Column="1"/>
+
+                        <CheckBox x:Name="UseSpecials"
+                                  Grid.Row="3"/>
+                        <Label Text="Znaki Specjalne"
+                               Grid.Row="3"
+                               Grid.Column="1"/>
+
+                        <Button Text="Generuj hasło"
+                                Grid.Row="4"
+                                Grid.ColumnSpan="2"
+                                Clicked="GeneratePassword"/>
+                    </Grid>
+                </Border>
+            </FlexLayout>
+
+            <Button Text="Zatwierdź"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Clicked="Submit"/>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
