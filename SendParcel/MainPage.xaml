@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SendParcel.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Rodzaj przesyłki"
+                   StyleClass="Header"/>
+            <BoxView BackgroundColor="{DynamicResource Primary}"
+                     CornerRadius="20"
+                     Grid.Row="1"
+                     Grid.RowSpan="3"/>
+
+            <RadioButton Content="Pocztówka"
+                         Value="0"
+                         GroupName="parcelType"
+                         CheckedChanged="setParcelType"
+                         Grid.Row="1"/>
+            <RadioButton Content="List"
+                         Value="1"
+                         GroupName="parcelType"
+                         CheckedChanged="setParcelType"
+                         IsChecked="True"
+                         Grid.Row="2"/>
+            <RadioButton Content="Paczka"
+                         Value="2"
+                         GroupName="parcelType"
+                         CheckedChanged="setParcelType"
+                         Grid.Row="3"/>
+
+            <Button Text="Sprawdż cenę"
+                    Clicked="getParcelType"
+                    Grid.Row="4"/>
+
+            <HorizontalStackLayout
+                Grid.Row="5"
+                Grid.RowSpan="2">
+                <Image Source="list.png"
+                       x:Name="Icon"/>
+                <Label Text="Cena: 1,50zł"
+                       x:Name="Price"
+                       Style="{DynamicResource price}"/>
+            </HorizontalStackLayout>
+
+            <Label Text="Dane Adresowe"
+                   StyleClass="Header"
+                   Grid.Column="1"/>
+            <BoxView BackgroundColor="{DynamicResource Primary}"
+                     CornerRadius="20"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Grid.RowSpan="6"/>
+
+            <Label Text="Ulica z numerem"
+                   Grid.Column="1"
+                   Grid.Row="1"/>
+            <Entry x:Name="EntStreet"
+                   Grid.Column="1"
+                   Grid.Row="2"/>
+            <Label Text="Kod pocztowy"
+                   Grid.Column="1"
+                   Grid.Row="3"/>
+            <Entry x:Name="EntPostalCode"
+                   Placeholder="00-000"
+                   Grid.Column="1"
+                   Grid.Row="4"/>
+            <Label Text="Miasto"
+                   Grid.Column="1"
+                   Grid.Row="5"/>
+            <Entry x:Name="EntCity"
+                   Grid.Column="1"
+                   Grid.Row="6"/>
+
+
+            <Button Text="Zatwierdź"
+                    Clicked="Submit"
+                    Grid.Row="7"
+                    Grid.ColumnSpan="2"/>
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style TargetType="Grid">
+        <Setter Property="Margin" Value="20"/>
+        <Setter Property="RowSpacing" Value="10"/>
+        <Setter Property="ColumnSpacing" Value="10"/>
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="Margin" Value="20,10,5,5"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style TargetType="Label" Class="Header">
+        <Setter Property="VerticalTextAlignment" Value="End"/>
+        <Setter Property="Margin" Value="20,0,0,-20"/>
+        <Setter Property="ZIndex" Value="1"/>
+        <Setter Property="FontSize" Value="Subtitle"/>
+    </Style>
+
+    <Style TargetType="Label" x:Key="price">
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <Style TargetType="RadioButton">
+        <Setter Property="Margin" Value="20,10,0,0"/>
+    </Style>
+
+    <Style TargetType="HorizontalStackLayout">
+        <Setter Property="HorizontalOptions" Value="Center"/>
+    </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="Margin" Value="20,0,20,10"/>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryDark}"/>
+        <Setter Property="CornerRadius" Value="10"/>
+    </Style>
+
+</ResourceDictionary>
