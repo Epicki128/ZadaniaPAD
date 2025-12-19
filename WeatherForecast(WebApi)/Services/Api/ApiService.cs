@@ -9,7 +9,7 @@ namespace WeatherForecast_WebApi_.Services.Api
     {
         protected readonly HttpClient Client;
 
-        protected const string API_KEY = "93e7a5b05d1549c7924215005250112";
+        protected const string API_KEY = "YOUR API KEY";
 
         public ApiService(HttpClient client)
         {
