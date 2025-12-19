@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="WeatherForecast_WebApi_.MainPage">
+    <AbsoluteLayout>
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <BoxView Color="{DynamicResource Primary}"
+                     CornerRadius="10"
+                     Grid.ColumnSpan="2"/>
+
+            <Grid x:Name="GridHeader"
+                  Grid.ColumnSpan="2" 
+                  RowDefinitions="*">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+
+                <Image x:Name="ImageWeatherSmall"
+                       HeightRequest="48"
+                       WidthRequest="48"/>
+
+                <Label x:Name="LabelCitySmall"
+                       SemanticProperties.Description="Name of city"
+                       Text="Lorem Ipsum"
+                       Grid.Column="1"/>
+
+                <Entry x:Name="EntryCity"
+                        Grid.Column="3"
+                        Placeholder="Wyszukaj Miasto"
+                        Focused="EntryCityFocused"
+                        Unfocused="EntryCityFocused"
+                        ClearButtonVisibility="WhileEditing"
+                        TextChanged="EntryCityTextChanged"/>
+
+                <Button Text="Sprawdź pogodę"
+                        Clicked="Forecaster"
+                        Grid.Column="5"/>
+
+
+            </Grid>
+
+
+            <Grid Grid.Row="1"
+                  RowDefinitions="*"
+                  ColumnDefinitions="*,*,*"
+                  Padding="0">
+                <BoxView Color="{DynamicResource Secondary}"
+                             CornerRadius="10"/>
+
+                <Grid RowDefinitions="*,30,30"
+                      Padding="0,20,0,20">
+                    <Label x:Name="LabelCityBig"
+                           VerticalOptions="Center"
+                           Style="{DynamicResource LabelCityBig}"/>
+                    <Label x:Name="LabelLatitude"
+                           Grid.Row="1"/>
+                    <Label x:Name="LabelLongtitude"
+                           Grid.Row="2"/>
+                </Grid>
+
+                <BoxView Color="{DynamicResource Secondary}"
+                             CornerRadius="10"
+                             Grid.Column="1"/>
+
+                <Grid Grid.Column="1"
+                      RowDefinitions="3*,*,*"
+                      ColumnDefinitions="*,*">
+                    <Image x:Name="ImageWeatherBig"
+                           Grid.ColumnSpan="2"
+                           HeightRequest="200"
+                           WidthRequest="200"/>
+
+                    <Label Text="Temperatura(&#xb0;C)"
+                           Margin="5,20,0,0"
+                           Grid.Row="1"/>
+                    <Label x:Name="LabelCurrentTemperature"
+                           Margin="0,20,0,0"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+
+                    <Label x:Name="LabelCurrentWeatherDescription"
+                           Grid.Row="2"
+                           Grid.ColumnSpan="2"/>
+                </Grid>
+
+                <BoxView Color="{DynamicResource Secondary}"
+                         CornerRadius="10"
+                         Grid.Column="2"/>
+
+                <Grid Grid.Column="2"
+                      Style="{DynamicResource GridCurrentDayData}"
+                      ColumnDefinitions="*,*"
+                      Padding="15"
+                      RowSpacing="30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="25"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="Prędkość wiatru:"
+                           StyleClass="CurrentDayData"/>
+                    <Label x:Name="LabelCurrentWindSpeed"
+                           StyleClass="CurrentDayData"
+                           Grid.Column="1"/>
+
+                    <Label Text="Ciśnienie:"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="1"/>
+                    <Label x:Name="LabelCurrentPressure"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+
+                    <Label Text="Wilgotność:"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="2"/>
+                    <Label x:Name="LabelCurrentHumidity"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="2"
+                           Grid.Column="1"/>
+
+                    <Label Text="Zachmurzenie:"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="3"/>
+                    <Label x:Name="LabelCurrentCloudCoverage"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="3"
+                           Grid.Column="1"/>
+
+                    <Label Text="Opady(mm):"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="4"/>
+                    <Label x:Name="LabelCurrentPrecipitation"
+                           StyleClass="CurrentDayData"
+                           Grid.Row="4"
+                           Grid.Column="1"/>
+                </Grid>
+            </Grid>
+
+            <BoxView Color="{DynamicResource Secondary}"
+                     CornerRadius="10"
+                     Grid.Row="2"/>
+
+            <ScrollView Orientation="Horizontal"
+                        Grid.Row="2">
+                <HorizontalStackLayout x:Name="DayTiles"
+                                       BindableLayout.ItemsSource="{Binding forecastday}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="0"
+                                  Margin="0">
+                                <BoxView Color="{DynamicResource Secondary}"
+                                         CornerRadius="10"/>
+                                <FlexLayout StyleClass="ForecastDay"
+                                        ToolTipProperties.Text="Kliknij mnie!">
+                                    <FlexLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SelectForecastDay"
+                                                          BindingContext="{Binding day}"/>
+                                    </FlexLayout.GestureRecognizers>
+                                    <Label StyleClass="ForecastDayTileDate"
+                                       Text="{Binding date}"/>
+                                    <Image Source="{Binding day.condition.icon, StringFormat='https:{0}'}"
+                                       HeightRequest="150"
+                                       WidthRequest="150"/>
+                                    <Label StyleClass="ForecastDayTileData"
+                                       Text="{Binding day.avgtemp_c, StringFormat='Temperatura: {0}&#xb0;C'}"/>
+                                    <Label StyleClass="ForecastDayTileData"
+                                       Text="{Binding day.maxwind_kph, StringFormat='Prędkość wiatru: {0}km/h'}"/>
+                                </FlexLayout>
+                            </Grid>
+
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </HorizontalStackLayout>
+            </ScrollView>
+
+
+
+            <BoxView Color="{DynamicResource Secondary}"
+                     CornerRadius="10"
+                     Grid.Column="1"
+                     Grid.Row="1"
+                     Grid.RowSpan="2"/>
+
+            <Grid x:Name="GridForecastDayDetails"
+                  Grid.Column="1"
+                  Grid.Row="1"
+                  Grid.RowSpan="2"
+                  IsVisible="False"
+                  ColumnDefinitions="*,*,*">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label x:Name="LabelForecastDayWeatherDescription"
+                       Grid.ColumnSpan="3"/>
+
+                <Border Grid.ColumnSpan="3"
+                        Grid.RowSpan="3"
+                        Grid.Row="1"
+                        Stroke="{DynamicResource Primary}"/>
+
+                <Label Text="Temperatura"
+                       Grid.ColumnSpan="3"
+                       Grid.Row="1"/>
+
+                <Label Text="Najmniejsza"
+                       Grid.Row="2"/>
+                <Label x:Name="LabelForecastDayTempMin"
+                       Grid.Row="3"/>
+
+                <Label Text="Średnia"
+                       Grid.Row="2"
+                       Grid.Column="1"/>
+                <Label x:Name="LabelForecastDayTempAvg"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+
+                <Label Text="Najwyższa"
+                       Grid.Row="2"
+                       Grid.Column="2"/>
+                <Label x:Name="LabelForecastDayTempMax"
+                       Grid.Row="3"
+                       Grid.Column="2"/>
+
+                <Label Text="Najwyższa prędkość wiatru:"
+                       Grid.Row="4"/>
+                <Label x:Name="LabelForecastDayWindSpeed"
+                       Grid.Row="4"
+                       Grid.Column="2"/>
+
+                <Label Text="Opady deszczu:"
+                       Grid.Row="5"/>
+                <Label x:Name="LabelForecastDayPrecipitation"
+                       Grid.Row="5"
+                       Grid.Column="2"/>
+
+                <Label Text="Opady śniegu:"
+                       Grid.Row="6"/>
+                <Label x:Name="LabelForecastDaySnow"
+                       Grid.Row="6"
+                       Grid.Column="2"/>
+
+                <Label Text="Widoczność:"
+                       Grid.Row="7"/>
+                <Label x:Name="LabelForecastDayVisibility"
+                       Grid.Row="7"
+                       Grid.Column="2"/>
+
+                <Label Text="Wilgotność:"
+                       Grid.Row="8"/>
+                <Label x:Name="LabelForecastDayHumidity"
+                       Grid.Row="8"
+                       Grid.Column="2"/>
+
+                <Label Text="Szansa na deszcz:"
+                       Grid.Row="9"/>
+                <Label x:Name="LabelForecastDayRainChance"
+                       Grid.Row="9"
+                       Grid.Column="2"/>
+
+                <Label Text="Szansa na śnieg:"
+                       Grid.Row="10"/>
+                <Label x:Name="LabelForecastDaySnowChance"
+                       Grid.Row="10"
+                       Grid.Column="2"/>
+
+            </Grid>
+
+
+        </Grid>
+
+        <Border x:Name="Suggestions"
+                IsVisible="False"
+                Padding="0"
+                ZIndex="100"
+                BackgroundColor="{DynamicResource Primary}"
+                AbsoluteLayout.LayoutBounds="0,0,1,AutoSize">
+            <CollectionView x:Name="SuggestionsList"
+                SelectionMode="Single"
+                SelectionChanged="SuggestionsListSelectionChanged"/>
+        </Border>
+
+    </AbsoluteLayout>
+
+</ContentPage>

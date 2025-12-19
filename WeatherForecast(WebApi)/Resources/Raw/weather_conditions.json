@@ -1,0 +1,290 @@
+[
+    {
+        "code": 1000,
+        "day": "Słonecznie",
+        "night": "Bezchmurnie",
+        "icon": 113
+    },
+    {
+        "code": 1003,
+        "day": "Częściowe zachmurzenie",
+        "night": "Częściowe zachmurzenie",
+        "icon": 116
+    },
+    {
+        "code": 1006,
+        "day": "Zachmurzenie",
+        "night": "Zachmurzenie",
+        "icon": 119
+    },
+    {
+        "code": 1009,
+        "day": "Pochmurno",
+        "night": "Pochmurno",
+        "icon": 122
+    },
+    {
+        "code": 1030,
+        "day": "Zamglenie",
+        "night": "Zamglenie",
+        "icon": 143
+    },
+    {
+        "code": 1063,
+        "day": "Możliwe miejscowe opady deszczu",
+        "night": "Możliwe miejscowe opady deszczu",
+        "icon": 176
+    },
+    {
+        "code": 1066,
+        "day": "Możliwe miejscowe opady śniegu",
+        "night": "Możliwe miejscowe opady śniegu",
+        "icon": 179
+    },
+    {
+        "code": 1069,
+        "day": "Możliwe miejscowe opady śniegu z deszczem",
+        "night": "Możliwe miejscowe opady śniegu z deszczem",
+        "icon": 182
+    },
+    {
+        "code": 1072,
+        "day": "Możliwa miejscowa mroźna mżawka",
+        "night": "Możliwa miejscowa mroźna mżawka",
+        "icon": 185
+    },
+    {
+        "code": 1087,
+        "day": "Możliwe gwałtowne grzmienia",
+        "night": "Możliwe gwałtowne grzmienia",
+        "icon": 200
+    },
+    {
+        "code": 1114,
+        "day": "Wiatr ze śniegiem",
+        "night": "Wiatr ze śniegiem",
+        "icon": 227
+    },
+    {
+        "code": 1117,
+        "day": "Śnieżyca",
+        "night": "Śnieżyca",
+        "icon": 230
+    },
+    {
+        "code": 1135,
+        "day": "Mgła",
+        "night": "Mgła",
+        "icon": 248
+    },
+    {
+        "code": 1147,
+        "day": "Marznąca mgła",
+        "night": "Marznąca mgła",
+        "icon": 260
+    },
+    {
+        "code": 1150,
+        "day": "Miejscami słaba mżawka",
+        "night": "Miejscami słaba mżawka",
+        "icon": 263
+    },
+    {
+        "code": 1153,
+        "day": "Słaba mżawka",
+        "night": "Słaba mżawka",
+        "icon": 266
+    },
+    {
+        "code": 1168,
+        "day": "Marznąca mżawka",
+        "night": "Marznąca mżawka",
+        "icon": 281
+    },
+    {
+        "code": 1171,
+        "day": "Silna marznąca mżawka",
+        "night": "Silna marznąca mżawka",
+        "icon": 284
+    },
+    {
+        "code": 1180,
+        "day": "Miejscami słaby deszcz",
+        "night": "Miejscami słaby deszcz",
+        "icon": 293
+    },
+    {
+        "code": 1183,
+        "day": "Słaby deszcz",
+        "night": "Słaby deszcz",
+        "icon": 296
+    },
+    {
+        "code": 1186,
+        "day": "Umiarkowany deszcz okresami",
+        "night": "Umiarkowany deszcz okresami",
+        "icon": 299
+    },
+    {
+        "code": 1189,
+        "day": "Umiarkowany deszcz",
+        "night": "Umiarkowany deszcz",
+        "icon": 302
+    },
+    {
+        "code": 1192,
+        "day": "Silny deszcz okresami",
+        "night": "Silny deszcz okresami",
+        "icon": 305
+    },
+    {
+        "code": 1195,
+        "day": "Silny deszcz",
+        "night": "Silny deszcz",
+        "icon": 308
+    },
+    {
+        "code": 1198,
+        "day": "Słaby marznący deszcz",
+        "night": "Słaby marznący deszcz",
+        "icon": 311
+    },
+    {
+        "code": 1201,
+        "day": "Umiarkowany lub silny marznący deszcz",
+        "night": "Umiarkowany lub silny marznący deszcz",
+        "icon": 314
+    },
+    {
+        "code": 1204,
+        "day": "Słaby deszcz ze śniegiem",
+        "night": "Słaby deszcz ze śniegiem",
+        "icon": 317
+    },
+    {
+        "code": 1207,
+        "day": "Umiarkowany lub silny deszcz ze śniegiem",
+        "night": "Umiarkowany lub silny deszcz ze śniegiem",
+        "icon": 320
+    },
+    {
+        "code": 1210,
+        "day": "Miejscami słaby śnieg",
+        "night": "Miejscami słaby śnieg",
+        "icon": 323
+    },
+    {
+        "code": 1213,
+        "day": "Słaby śnieg",
+        "night": "Słaby śnieg",
+        "icon": 326
+    },
+    {
+        "code": 1216,
+        "day": "Miejscami umiarkowany śnieg",
+        "night": "Miejscami umiarkowany śnieg",
+        "icon": 329
+    },
+    {
+        "code": 1219,
+        "day": "Umiarkowany śnieg",
+        "night": "Umiarkowany śnieg",
+        "icon": 332
+    },
+    {
+        "code": 1222,
+        "day": "Miejscami silny śnieg",
+        "night": "Miejscami silny śnieg",
+        "icon": 335
+    },
+    {
+        "code": 1225,
+        "day": "Silny śnieg",
+        "night": "Silny śnieg",
+        "icon": 338
+    },
+    {
+        "code": 1237,
+        "day": "Krupa lodowa",
+        "night": "Krupa lodowa",
+        "icon": 350
+    },
+    {
+        "code": 1240,
+        "day": "Słabe przelotne opady deszczu",
+        "night": "Słabe przelotne opady deszczu",
+        "icon": 353
+    },
+    {
+        "code": 1243,
+        "day": "Umiarkowane lub silne przelotne opady deszczu",
+        "night": "Umiarkowane lub silne przelotne opady deszczu",
+        "icon": 356
+    },
+    {
+        "code": 1246,
+        "day": "Ulewne przelotne opady deszczu",
+        "night": "Ulewne przelotne opady deszczu",
+        "icon": 359
+    },
+    {
+        "code": 1249,
+        "day": "Słabe przelotne opady deszczu ze śniegiem",
+        "night": "Słabe przelotne opady deszczu ze śniegiem",
+        "icon": 362
+    },
+    {
+        "code": 1252,
+        "day": "Umiarkowane lub silne przelotne opady deszczu ze śniegiem",
+        "night": "Umiarkowane lub silne przelotne opady deszczu ze śniegiem",
+        "icon": 365
+    },
+    {
+        "code": 1255,
+        "day": "Słabe przelotne opady śniegu",
+        "night": "Słabe przelotne opady śniegu",
+        "icon": 368
+    },
+    {
+        "code": 1258,
+        "day": "Umiarkowane lub silne przelotne opady śniegu",
+        "night": "Umiarkowane lub silne przelotne opady śniegu",
+        "icon": 371
+    },
+    {
+        "code": 1261,
+        "day": "Słabe przelotne opady krupy lodowej",
+        "night": "Słabe przelotne opady krupy lodowej",
+        "icon": 374
+    },
+    {
+        "code": 1264,
+        "day": "Umiarkowane lub silne przelotne opady krupy lodowej",
+        "night": "Umiarkowane lub silne przelotne opady krupy lodowej",
+        "icon": 377
+    },
+    {
+        "code": 1273,
+        "day": "Miejscami słaby deszcz z burzą",
+        "night": "Miejscami słaby deszcz z burzą",
+        "icon": 386
+    },
+    {
+        "code": 1276,
+        "day": "Umiarkowany lub silny deszcz z burzą",
+        "night": "Umiarkowany lub silny deszcz z burzą",
+        "icon": 389
+    },
+    {
+        "code": 1279,
+        "day": "Miejscami słaby śnieg z burzą",
+        "night": "Miejscami słaby śnieg z burzą",
+        "icon": 392
+    },
+    {
+        "code": 1282,
+        "day": "Umiarkowany lub silny śnieg z burzą",
+        "night": "Umiarkowany lub silny śnieg z burzą",
+        "icon": 395
+    }
+]

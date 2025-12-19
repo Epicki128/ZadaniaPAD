@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--#region Grids-->
+
+    <Style TargetType="Grid">
+        <Setter Property="ColumnSpacing" Value="10"/>
+        <Setter Property="RowSpacing" Value="10"/>
+        <Setter Property="Padding" Value="10"/>
+    </Style>
+
+    <Style TargetType="Grid" x:Key="GridCurrentDayData">
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
+    <!--#endregion Grids-->
+
+    <Style TargetType="ImageButton">
+        <Setter Property="HeightRequest" Value="100"/>
+        <Setter Property="WidthRequest" Value="100"/>
+    </Style>
+
+    <!--#region Labels-->
+
+    <Style TargetType="Label">
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="NationalParkRegular"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+    </Style>
+
+
+    <Style TargetType="Label" Class="CurrentDayData">
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+    <Style TargetType="Label" Class="ForecastDayTileDate">
+        <Setter Property="FontSize" Value="24"/>
+    </Style>
+
+    <Style TargetType="Label" Class="ForecastDayTileData">
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+
+    <Style TargetType="Label" x:Key="LabelCityBig">
+        <Setter Property="FontSize" Value="54"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <!--#endregion Labels-->
+
+    <Style TargetType="HorizontalStackLayout">
+        <Setter Property="Spacing" Value="10"/>
+    </Style>
+
+    <Style TargetType="FlexLayout" Class="ForecastDay">
+        <Setter Property="Direction" Value="Column"/>
+        <Setter Property="AlignItems" Value="Center"/>
+        <Setter Property="JustifyContent" Value="Center"/>
+        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="Padding" Value="5"/>
+    </Style>
+
+</ResourceDictionary>
