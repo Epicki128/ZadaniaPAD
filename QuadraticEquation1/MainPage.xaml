@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuadraticEquation1.MainPage">
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*,200,*"
+              RowDefinitions="*,50,50,50,*"
+              RowSpacing="20">
+            <Entry x:Name="EntryNumber"
+                   Placeholder="Podaj x"
+                   Grid.Column="1"
+                   Grid.Row="1"/>
+            <Button Text="Oblicz"
+                    Clicked="Calculate"
+                    Grid.Column="1"
+                    Grid.Row="2"/>
+            <Label x:Name="LabelResult"
+                   Text="y = 3x^2 + 2x - 2"
+                   HorizontalTextAlignment="Center"
+                   Grid.Column="1"
+                   Grid.Row="3"
+                   Grid.RowSpan="2"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
