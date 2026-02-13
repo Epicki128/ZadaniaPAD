@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuadraticEquation3.MainPage">
+
+    <ScrollView>
+        <Grid ColumnDefinitions="*,200,200,*"
+              RowDefinitions="*,50,50,50,50,50,50,5*"
+              ColumnSpacing="20"
+              RowSpacing="20">
+            <Entry x:Name="EntryX"
+           Placeholder="Podaj x"
+           Grid.Column="1"
+           Grid.Row="1"/>
+            <Entry x:Name="EntryA"
+           Placeholder="Podaj a"
+           Grid.Column="1"
+           Grid.Row="2"/>
+            <Entry x:Name="EntryB"
+           Placeholder="Podaj b"
+           Grid.Column="1"
+           Grid.Row="3"/>
+            <Entry x:Name="EntryC"
+           Placeholder="Podaj c"
+           Grid.Column="1"
+           Grid.Row="4"/>
+            <Button Text="Oblicz"
+            Clicked="Calculate"
+            Grid.Column="1"
+            Grid.Row="5"/>
+            <Label x:Name="LabelResult"
+           Text="y = ax² + bx + c"
+           HorizontalTextAlignment="Center"
+           Grid.Column="1"
+           Grid.Row="6"
+           Grid.RowSpan="2"/>
+
+            <Label x:Name="LabelDelta"
+                   Text="&#x394; = b² - 4ac"
+                   Grid.Column="2"
+                   Grid.Row="1"
+                   Grid.RowSpan="2"/>
+            <Label x:Name="LabelZeros"
+                   Text=""
+                   Grid.Column="2"
+                   Grid.Row="3"
+                   Grid.RowSpan="2"
+                   Grid.ColumnSpan="2"/>
+            <Label x:Name="LabelVertexX"
+                   Text="W(x) = -b / 2a"
+                   Grid.Column="2"
+                   Grid.Row="5"
+                   Grid.RowSpan="2"/>
+            <Label x:Name="LabelVertexY"
+                   Text="W(y) = -&#x394; / 4a"
+                   Grid.Column="2"
+                   Grid.Row="7"
+                   Grid.RowSpan="2"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
