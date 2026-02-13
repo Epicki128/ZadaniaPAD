@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadraticEquation2", "Quadr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadraticEquation3", "QuadraticEquation3\QuadraticEquation3.csproj", "{EEE6CCBF-6050-4E6D-8EF3-A1200BA3B9F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadraticEquation4", "QuadraticEquation4\QuadraticEquation4.csproj", "{EEDC0B7C-1667-4496-B386-FCFA58D2D686}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,11 @@ Global
 		{EEE6CCBF-6050-4E6D-8EF3-A1200BA3B9F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEE6CCBF-6050-4E6D-8EF3-A1200BA3B9F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEE6CCBF-6050-4E6D-8EF3-A1200BA3B9F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEDC0B7C-1667-4496-B386-FCFA58D2D686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDC0B7C-1667-4496-B386-FCFA58D2D686}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDC0B7C-1667-4496-B386-FCFA58D2D686}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EEDC0B7C-1667-4496-B386-FCFA58D2D686}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDC0B7C-1667-4496-B386-FCFA58D2D686}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
